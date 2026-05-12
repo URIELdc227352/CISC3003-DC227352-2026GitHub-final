@@ -1,9 +1,9 @@
 <?php
-$servername = "127.0.0.1";
-$username = "root";
-$password = "";
-$dbname = "finalexam_c";
-$port = 2345;
+$servername = getenv('MYSQLHOST');
+$username   = getenv('MYSQLUSER');
+$password   = getenv('MYSQLPASSWORD');
+$dbname     = getenv('MYSQLDATABASE');
+$port       = getenv('MYSQLPORT');
 
 $conn = new mysqli($servername, $username, $password, $dbname, $port);
 
